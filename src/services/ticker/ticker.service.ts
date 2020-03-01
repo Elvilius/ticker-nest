@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import * as ccxt from 'ccxt';
-import { TickerDto } from 'dist/controllers/ticker/ticker.dto';
+import { TickerDto } from '../../controllers/ticker/ticker.dto';
 import { Exchange, Ticker } from 'ccxt';
 
 @Injectable()
