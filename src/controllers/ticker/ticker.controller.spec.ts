@@ -15,7 +15,7 @@ describe('TickerController', () => {
     it('should return ticker', async () => {
       const tickerDto = new TickerDto();
       tickerDto.firstCurrency = 'BTC';
-      tickerDto.secondCurrency = 'USD';
+      tickerDto.secondCurrency = 'UTD';
 
       expect(tickerController.getTicker(tickerDto)).toEqual(Promise.resolve({}));
     });
