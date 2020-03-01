@@ -1,10 +1,4 @@
-import {
-  Controller,
-  Get,
-  Query,
-  BadRequestException,
-  HttpStatus,
-} from '@nestjs/common';
+import { Controller, Get, Query, BadRequestException, HttpStatus } from '@nestjs/common';
 import { TickerService } from '../../services/ticker/ticker.service';
 import { TickerDto } from './ticker.dto';
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
@@ -21,13 +15,8 @@ export class TickerController {
   @ApiResponse({ status: HttpStatus.OK })
   async getTicker(@Query() tickerDto: TickerDto) {
     try {
-      const normalizedCurrency = this.tickerService.normalizeCurrency(
-        tickerDto,
-      );
-      return await this.tickerService.getTicker(
-        normalizedCurrency,
-        tickerDto.exchangesId,
-      );
+      const normalizedCurrency = this.tickerService.normalizeCurrency(tickerDto);
+      return await this.tickerService.getTicker(normalizedCurrency, tickerDto.exchangesId);
     } catch (e) {
       throw new BadRequestException(e.message);
     }
