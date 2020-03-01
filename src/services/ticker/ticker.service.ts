@@ -15,7 +15,7 @@ export class TickerService {
     return `${firstCurrency}/${secondCurrency}`;
   }
 
-  private getExchanges(exchangesId: string): Exchange {
+  getExchanges(exchangesId: string): Exchange {
     try {
       return new ccxt[exchangesId]();
     } catch (e) {
