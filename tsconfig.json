@@ -5,11 +5,12 @@
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es6",
+    "target": "es2017",
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "./",
-    "incremental": true
+    "incremental": true,
+    "skipLibCheck": true // https://github.com/FoalTS/foal/issues/528
   },
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "dist"]
 }
