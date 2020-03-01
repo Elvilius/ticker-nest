@@ -10,7 +10,7 @@ export class TickerController {
 
   @Get()
   @ApiOperation({
-    summary: 'Возвращаeт тикер заданной пары с биржи',
+    summary: 'Возвращает тикер заданной пары с биржи',
   })
   @ApiResponse({ status: HttpStatus.OK })
   async getTicker(@Query() tickerDto: TickerDto) {
