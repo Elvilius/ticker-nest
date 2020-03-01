@@ -2,7 +2,7 @@
   "name": "ticker",
   "private": true,
   "version": "1.0.0",
-  "description": "Alert micro service",
+  "description": "Ticker web service",
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",
