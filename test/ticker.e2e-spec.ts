@@ -14,7 +14,7 @@ describe('TickerController (e2e)', () => {
     await app.init();
   });
   describe('/ticker (GET)', () => {
-    it('should return ticker and  status code 200', () => {
+    it('should return ticker and status code 200', () => {
       const queryParams = 'firstCurrency=BTC&secondCurrency=USD&exchangesId=bitmex';
       return request(app.getHttpServer())
         .get('/ticker')
