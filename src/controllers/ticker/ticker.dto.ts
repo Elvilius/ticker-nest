@@ -20,7 +20,7 @@ export class TickerDto {
   @IsIn(['bitmex', 'coinbasepro'])
   @IsOptional()
   @ApiProperty({
-    description: 'Название бирже',
+    description: 'Название биржи',
     type: String,
     default: 'bitmex',
   })
