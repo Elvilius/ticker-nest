@@ -13,9 +13,11 @@ describe('TickerController', () => {
 
   describe('ticker', () => {
     it('should return ticker', async () => {
-      const tickerDto = { firstCurrency: 'bts', secondCurrency: 'bts' } as TickerDto;
+      const tickerDto = new TickerDto();
+      tickerDto.firstCurrency = 'BTC';
+      tickerDto.secondCurrency = 'USD';
 
-      await expect(tickerController.getTicker(tickerDto));
+      expect(tickerController.getTicker(tickerDto)).toEqual(Promise.resolve({}));
     });
   });
 });
